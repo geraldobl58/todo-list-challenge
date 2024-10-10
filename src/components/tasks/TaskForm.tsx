@@ -1,13 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { v4 as uuidv4 } from "uuid";
-import { Task, TaskStatus } from "../../types/tasks";
+import { TaskStatus } from "../../types/tasks";
+import { useTasks } from "../../contexts/TaskContext";
 
-interface TaskFormProps {
-  onSubmit: (task: Task) => void;
-  editingTask: Task | null;
-}
-
-export const TaskForm = ({ onSubmit, editingTask }: TaskFormProps) => {
+export const TaskForm = () => {
+  const { handleAddOrEditTask, editingTask } = useTasks();
   const [formData, setFormData] = useState({
     title: "",
     description: "",
@@ -33,7 +30,10 @@ export const TaskForm = ({ onSubmit, editingTask }: TaskFormProps) => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    onSubmit({ ...formData, id: editingTask ? editingTask.id : uuidv4() });
+    handleAddOrEditTask({
+      ...formData,
+      id: editingTask ? editingTask.id : uuidv4(),
+    });
     setFormData({
       title: "",
       description: "",

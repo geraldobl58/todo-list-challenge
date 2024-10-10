@@ -8,7 +8,7 @@ import {
   getTasks,
 } from "../services/tasks/api";
 
-interface TaskContextProps {
+export interface TaskContextProps {
   tasks: Task[];
   editingTask: Task | null;
   handleAddOrEditTask: (task: Task) => Promise<void>;
@@ -17,9 +17,11 @@ interface TaskContextProps {
   handleEditClick: (task: Task) => void;
 }
 
-const TaskContext = createContext<TaskContextProps | undefined>(undefined);
+export const TaskContext = createContext<TaskContextProps | undefined>(
+  undefined
+);
 
-interface TaskProviderProps {
+export interface TaskProviderProps {
   children: React.ReactNode;
 }
 

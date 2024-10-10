@@ -70,14 +70,17 @@ export const TaskList = () => {
                   {task.status === TaskStatus.IN_PROGRESS && (
                     <button onClick={() => handleEditClick(task)}>
                       <Edit className="size-4" />
+                      <span className="sr-only">edit</span>
                     </button>
                   )}
                   <button onClick={() => handleDeleteTask(task.id)}>
                     <X className="size-4" />
+                    <span className="sr-only">delete</span>
                   </button>
                   {task.status === TaskStatus.IN_PROGRESS && (
                     <button onClick={() => handleCompleteTask(task.id)}>
                       <Check className="size-4" />
+                      <span className="sr-only">check</span>
                     </button>
                   )}
                 </td>

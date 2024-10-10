@@ -1,34 +1,10 @@
 {
   "tasks": [
     {
-      "id": "21441af7-d2c4-46ed-8eca-fcb7da131ffc",
-      "title": "asdas",
-      "description": "asdasd",
-      "status": "completed"
-    },
-    {
-      "id": "93e735a1-4a96-47a7-8677-b0dc6dc46355",
-      "title": "dsfsd",
-      "description": "sdfsdf",
-      "status": "completed"
-    },
-    {
-      "id": "3257a6e1-0ef5-46d0-b893-c5e7cd26bc5a",
-      "title": "dsfds",
+      "id": "631117bd-1599-4428-a5ea-e1a58350a2c0",
+      "title": "dsfsdf",
       "description": "sdfsd",
-      "status": "completed"
-    },
-    {
-      "id": "edfe2b82-fc19-492a-bfeb-e09e0ed40107",
-      "title": "sadasd",
-      "description": "asdasd",
-      "status": "completed"
-    },
-    {
-      "title": "Gera",
-      "description": "Gera",
-      "status": "completed",
-      "id": "a59e7cc3-f229-49f7-92ac-223f926a5979"
+      "status": "in_progress"
     }
   ]
 }
